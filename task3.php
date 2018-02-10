@@ -8,7 +8,19 @@
     <title>Задание 3</title>
 </head>
 <body>
+<?php
 
+$arr = [1,2,3,4];
+
+echo var_dump(array_reduce(
+    $arr,
+    function(&$res, $a) { $res += $a; },
+    0
+));
+
+
+
+?>
 
 </body>
 </html>
