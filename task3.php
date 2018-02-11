@@ -1,3 +1,7 @@
+<?php
+    require  __DIR__ . '/functions.php';
+?>
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -8,18 +12,15 @@
     <title>Задание 3</title>
 </head>
 <body>
-<?php
+<h1>Задание №3</h1>
 
-$arr = [1,2,3,4];
-
-echo var_dump(array_reduce(
-    $arr,
-    function(&$res, $a) { $res += $a; },
-    0
-));
-
-
-
+<h2> Определение пола по имени: </h2>
+Пол для имени Коля: <?php
+ echo getSex('Коля');
+?><br>Пол для имени Катя: <?php
+ echo getSex('Катя');
+?><br>Пол для имени Саша: <?php
+ echo getSex('Саша');
 ?>
 
 </body>
