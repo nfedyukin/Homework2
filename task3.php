@@ -22,6 +22,9 @@
 ?><br>Пол для имени Саша: <?php
  echo getSex('Саша');
 ?>
+<br><br>
+
+<a href="index.html">   Назад</a>
 
 </body>
 </html>

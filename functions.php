@@ -10,6 +10,14 @@ function discriminant($a, $b, $c){
     return $b * $b - 4 * $a * $c;
 }
 
+function getRoot1($a, $b, $D){
+    return (-1 * $b + sqrt($D))/(2*$a);
+}
+
+function getRoot2($a, $b, $D){
+    return (-1 * $b - sqrt($D))/(2*$a);
+}
+
 //Вычисление корней квадратного уровнения
 function getRoots($a, $b, $D){
     if($D > 0){
@@ -48,7 +56,6 @@ function getSex($name){
         'кирилл'=>'м',
         'николай'=>'м',
         'коля'=>'м',
-        'альберт'=>'м',
         'анна'=>'ж',
         'аня'=>'ж',
         'виктория'=>'ж',
@@ -66,6 +73,6 @@ function getSex($name){
         'маша'=>'ж'
     ];
 
-    $sex = $namelist[mb_convert_case($name, MB_CASE_LOWER, "UTF-8")];
+    $sex = $namelist[mb_convert_case($name, MB_CASE_LOWER, 'UTF-8')];
     return $sex;
 }
